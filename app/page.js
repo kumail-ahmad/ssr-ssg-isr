@@ -1,23 +1,32 @@
+"use client";
 import React from "react";
-
-export default async function Home() {
+export default function Home() {
+  // its an async function but for the time being i have removed async
   console.log("Rendered & compiled successfully");
 
-  let data = await fetch("https://jsonplaceholder.typicode.com/photos", {
-    next: 3600,
-  });
-  let posts = await data.json();
+  // let data = await fetch("https://jsonplaceholder.typicode.com/photos", {
+  //   next: 3600,
+  // });
+  // let posts = await data.json();
 
   return (
-    <ul>
-      {posts.map((post) => (
-        <ul key={post.id}>
-          <li>
-            {post.title}---------{post.url}
-          </li>
-        </ul>
-      ))}
-    </ul>
+    <div>
+      <div className="secret">
+        Hey there! I am the secret code and my value is {process.env.EMAIL} of
+        index {process.env.NEXT_PUBLIC_ID}
+      </div>
+      <br />
+
+      {/* <ul>
+        {posts.map((post) => (
+          <ul key={post.id}>
+            <li>
+              {post.title}---------{post.url}
+            </li>
+          </ul>
+        ))}
+      </ul> */}
+    </div>
   );
 }
 
