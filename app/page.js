@@ -13,10 +13,12 @@ export default async function Home() {
       {posts.map((post) => (
         <ul key={post.id}>
           <li>
-            {post.title}---------{post.url}{" "}
+            {post.title}---------{post.url}
           </li>
         </ul>
       ))}
     </ul>
   );
 }
+
+export const dynamic = "force dynamic ";
