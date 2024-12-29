@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <div>
       <div className="secret">
-        Hey there! I am the secret code and my value is {process.env.EMAIL} of
-        index {process.env.NEXT_PUBLIC_ID}
+        Hey there! I am the secret code and my value is{" "}
+        {process.env.NEXT_PUBLIC_EMAIL} of index {process.env.NEXT_PUBLIC_ID}
       </div>
       <br />
 
