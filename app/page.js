@@ -14,6 +14,13 @@ export default function Home() {
       <div className="secret">
         Hey there! I am the secret code and my value is{" "}
         {process.env.NEXT_PUBLIC_EMAIL} of index {process.env.NEXT_PUBLIC_ID}
+        <style jsx>
+          {`
+            .secret {
+              background: red;
+            }
+          `}
+        </style>
       </div>
       <br />
 
